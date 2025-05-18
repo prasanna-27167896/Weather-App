@@ -399,6 +399,7 @@ hr {
     padding: 0;
     box-sizing: border-box;
   }
+
   .header {
     flex-direction: column;
     align-items: center;
@@ -468,7 +469,7 @@ hr {
 
   .weather-info-subtitle {
     width: 100%;
-    text-align: centers;
+    text-align: center;
   }
 
   .day-forecast-container {
@@ -501,6 +502,7 @@ hr {
     border: 1px solid var(--accent);
     border-radius: 5px;
   }
+
   .temp-value .temp {
     font-size: 72px;
   }
@@ -512,6 +514,8 @@ hr {
   .btns button {
     display: none;
   }
+
+  /* Modified */
 
   .default-city img {
     margin-right: 80px;
