@@ -394,10 +394,19 @@ hr {
 }
 
 @media (max-width: 768px) {
+  html,
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
   }
 
   .header {
@@ -411,15 +420,21 @@ hr {
   }
 
   .default-container {
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 20px 12px;
+    overflow-x: hidden;
   }
 
   .default-city {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
+  }
+
+  .default-city img {
+    margin-right: 0;
+    margin-bottom: 16px;
   }
 
   .search-horizontal {
@@ -456,8 +471,8 @@ hr {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 10%;
-    margin-bottom: 5%;
+    margin: 0 auto 5%;
+    margin-left: 22%;
   }
 
   .metric-row {
@@ -473,38 +488,46 @@ hr {
   }
 
   .day-forecast-container {
-    width: 600px;
+    width: 100%;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    gap: 27px;
+    gap: 20px;
     margin-top: 16px;
     padding: 0 16px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 2px solid var(--accent);
-    margin-left: 70px;
+    margin-left: 0;
   }
 
   #res-day {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     justify-content: center;
     width: 100%;
+    left: 30px;
   }
 
   #res-hour {
-    width: 487px;
-    position: absolute;
-    left: 13%;
+    width: 95%;
+    position: relative;
+    left: 42px;
+    margin-top: 16px;
     border: 1px solid var(--accent);
     border-radius: 5px;
+    box-sizing: border-box;
   }
 
   .temp-value .temp {
     font-size: 72px;
+  }
+
+  hr {
+    margin: auto;
   }
 
   .temp-unit {
@@ -513,11 +536,5 @@ hr {
 
   .btns button {
     display: none;
-  }
-
-  /* Modified */
-
-  .default-city img {
-    margin-right: 80px;
   }
 }
