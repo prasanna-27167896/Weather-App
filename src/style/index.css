@@ -472,7 +472,7 @@ hr {
     justify-content: center;
     align-items: center;
     margin: 0 auto 5%;
-    margin-left: 22%;
+    margin-left: 17%;
   }
 
   .metric-row {
@@ -494,13 +494,14 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    gap: 20px;
+    gap: 10px;
     margin-top: 16px;
     padding: 0 16px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 2px solid var(--accent);
     margin-left: 0;
+    font-size: small;
   }
 
   #res-day {
@@ -536,5 +537,9 @@ hr {
 
   .btns button {
     display: none;
+  }
+
+  .default-city img {
+    margin-right: 80px;
   }
 }
